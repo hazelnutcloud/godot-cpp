@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import os
 import json
 import re
 import shutil
@@ -2513,3 +2513,6 @@ def add_header(filename, lines):
 
     lines.append("// THIS FILE IS GENERATED. EDITS WILL BE LOST.")
     lines.append("")
+    
+if __name__ == "__main__":
+		generate_bindings(os.path.abspath("gdextension/extension_api.json"), True)
